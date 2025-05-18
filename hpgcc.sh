@@ -42,7 +42,7 @@ case $1 in
         ;;
 
     --firmware|-f)
-        SOPTS="cp /hpgcc3/rom /work"
+        SOPTS="cp -r /hpgcc3/rom /work"
         ;;
 
     '')
