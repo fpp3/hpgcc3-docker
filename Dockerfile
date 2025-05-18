@@ -12,11 +12,16 @@ RUN apt-get install -y --force-yes \
     make \
     python \
     python-pip \
+    python-dev \
     runit \
     unzip \
-    wget &&\
+    wget \
+    curl &&\
     apt-get clean
-RUN pip install jinja2
+
+COPY deps /tmp/deps
+RUN pip install /tmp/deps/MarkupSafe*.tar.gz && \
+    pip install /tmp/deps/Jinja2*.tar.gz
 
 COPY amake.sh conf.py entrypoint.sh hpgcc.sh install_hpgcc.sh makefile /hpgcc3/
 COPY subdir.tmpl /hpgcc3/templates/

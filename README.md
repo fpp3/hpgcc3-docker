@@ -18,6 +18,9 @@ To install type the following commands into the shell:
 ````
 git clone https://github.com/Mixih/hpgcc3-docker
 cd hpgcc3-docker
+mkdir deps
+pip download jinja2 --no-binary :all: --python-version 2.7 --no-deps -d deps
+pip download MarkupSafe==1.1.1 --python-version 2.7 --no-binary :all: --no-deps -d deps
 docker build -t hpgcc .
 ````
 Then you will need to create the `hpgcc` script somewhere in your PATH by
