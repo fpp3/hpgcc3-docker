@@ -21,6 +21,8 @@ printHelp() {
     echo "      output this scipt to stdout"
     echo "   --make -m"
     echo "      automake the current dir with default options"
+    echo "   --firmware -f"
+    echo "      get firmware 2.15 with HPGCC3 libs installed"
 }
 
 
@@ -37,6 +39,10 @@ case $1 in
 
     --script|-s)
         SOPTS="cat /hpgcc3/hpgcc.sh"
+        ;;
+
+    --firmware|-f)
+        SOPTS="cp /hpgcc3/rom /work"
         ;;
 
     '')
