@@ -16,7 +16,7 @@ command to be excecuted in the build environment to allow custom configurations.
 To install type the following commands into the shell:
  
 ````
-git clone https://github.com/Mixih/hpgcc3-docker
+git clone https://github.com/fpp3/hpgcc3-docker
 cd hpgcc3-docker
 mkdir deps
 pip download jinja2 --no-binary :all: --python-version 2.7 --no-deps -d deps
