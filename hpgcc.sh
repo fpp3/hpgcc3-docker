@@ -1,4 +1,4 @@
-#!/bin/env bash
+#!/usr/bin/env bash
 # grab current user name info
 
 VERSION="0.5b1"
